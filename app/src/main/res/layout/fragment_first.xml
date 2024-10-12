@@ -1,35 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<!-- Root element is a NestedScrollView which allows scrolling if the content overflows the screen -->
+<androidx.core.widget.NestedScrollView 
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".FirstFragment">
+    tools:context=".FirstFragment"> <!-- Defines the associated fragment context -->
 
+    <!-- ConstraintLayout inside the NestedScrollView for arranging UI components -->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:padding="16dp">
+        android:padding="16dp"> <!-- Adds 16dp padding to the layout -->
 
+        <!-- Button placed at the top of the layout -->
         <Button
-            android:id="@+id/button_first"
-            android:layout_width="wrap_content"
+            android:id="@+id/button_first" <!-- Unique ID for the button -->
+            android:layout_width="wrap_content" <!-- Button will wrap to the size of its content -->
             android:layout_height="wrap_content"
-            android:text="@string/next"
-            app:layout_constraintBottom_toTopOf="@id/textview_first"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            android:text="@string/next" <!-- Sets the text from a string resource -->
+            app:layout_constraintBottom_toTopOf="@id/textview_first" <!-- Places the button above the TextView -->
+            app:layout_constraintEnd_toEndOf="parent" <!-- Aligns the button's right edge to the parent's right edge -->
+            app:layout_constraintStart_toStartOf="parent" <!-- Aligns the button's left edge to the parent's left edge -->
+            app:layout_constraintTop_toTopOf="parent" /> <!-- Aligns the button's top edge to the parent's top edge -->
 
+        <!-- TextView placed below the button -->
         <TextView
-            android:id="@+id/textview_first"
-            android:layout_width="wrap_content"
+            android:id="@+id/textview_first" <!-- Unique ID for the TextView -->
+            android:layout_width="wrap_content" <!-- TextView will wrap to the size of its content -->
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:text="@string/lorem_ipsum"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/button_first" />
+            android:layout_marginTop="16dp" <!-- Adds 16dp margin above the TextView -->
+            android:text="@string/lorem_ipsum" <!-- Sets the text from a string resource (placeholder text) -->
+            app:layout_constraintBottom_toBottomOf="parent" <!-- Aligns the TextView's bottom edge to the parent's bottom -->
+            app:layout_constraintEnd_toEndOf="parent" <!-- Aligns the TextView's right edge to the parent's right edge -->
+            app:layout_constraintStart_toStartOf="parent" <!-- Aligns the TextView's left edge to the parent's left edge -->
+            app:layout_constraintTop_toBottomOf="@id/button_first" /> <!-- Places the TextView below the button -->
+    
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.core.widget.NestedScrollView>
