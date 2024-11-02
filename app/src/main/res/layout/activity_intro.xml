@@ -20,8 +20,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
-
-            <!-- ImageView to display an introduction image or button image -->
+             <!-- Introductory image displayed prominently -->
             <ImageView
                 android:id="@+id/introBtn"
                 android:layout_width="404dp"
