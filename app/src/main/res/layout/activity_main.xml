@@ -72,7 +72,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginTop="16dp">
-
+                 
+            <!-- Background image for the banner slider -->
                 <ImageView
                     android:id="@+id/backgroundImage"
                     android:layout_width="match_parent"
