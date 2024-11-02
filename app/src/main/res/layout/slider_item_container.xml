@@ -1,8 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- Root element for ImageView layout with namespace for Android attributes -->
 <ImageView xmlns:android="http://schemas.android.com/apk/res/android"
+    
+    <!-- Set the width of the ImageView to match the parent's width -->
     android:layout_width="match_parent"
+    
+    <!-- Set the height of the ImageView to match the parent's height -->
     android:layout_height="match_parent"
+    
+    <!-- Define the minimum height for the ImageView as 160dp to ensure visibility -->
     android:minHeight="160dp"
+    
+    <!-- Assign a unique ID to the ImageView for referencing it in the code -->
     android:id="@+id/imageSlide">
-
+    
 </ImageView>
