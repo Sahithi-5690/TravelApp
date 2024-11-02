@@ -13,6 +13,7 @@ ActivityIntroBinding binding;
         super.onCreate(savedInstanceState);
         binding = ActivityIntroBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+        // imagebutton to open the main activity
         binding.introBtn.setOnClickListener(v -> startActivity(new Intent(IntroActivity.this, MainActivity.class)));
     }
 }
