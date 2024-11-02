@@ -37,8 +37,7 @@
                 android:textColor="@color/darkBlue"
                 android:textSize="39sp"
                 android:textStyle="bold" />
-
-            <!-- Subtitle TextView: displays a subheading below the title, centered and smaller in size -->
+            <!-- Subtitle for additional context below the title -->
             <TextView
                 android:id="@+id/textView2"
                 android:layout_width="match_parent"
