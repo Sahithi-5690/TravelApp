@@ -1,17 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Layout for ImageView element with Android XML namespace declaration -->
-<ImageView xmlns:android="http://schemas.android.com/apk/res/android"
+<!-- XML layout for defining an ImageView element in Android -->
+
+<ImageView 
+    xmlns:android="http://schemas.android.com/apk/res/android"
     
-    <!-- Set width to match the parent container's width -->
+    <!-- Sets the ImageView to fill the full width of its parent container -->
     android:layout_width="match_parent"
     
-    <!-- Set height to match the parent container's height -->
+    <!-- Sets the ImageView to fill the full height of its parent container -->
     android:layout_height="match_parent"
     
-    <!-- Ensure a minimum height of 160dp for the ImageView to maintain visibility -->
+    <!-- Ensures the ImageView has a minimum height of 160dp to maintain visibility, 
+         even if no image source is provided or the view scales down -->
     android:minHeight="160dp"
     
-    <!-- Unique ID for the ImageView to enable reference in the code -->
+    <!-- Assigns a unique identifier to the ImageView for reference in Java/Kotlin code -->
     android:id="@+id/imageSlide">
     
 </ImageView>
