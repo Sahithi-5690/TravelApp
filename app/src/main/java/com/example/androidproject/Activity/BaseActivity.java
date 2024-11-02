@@ -5,7 +5,7 @@ import android.view.Window;
 import android.view.WindowManager;
 
 import androidx.appcompat.app.AppCompatActivity;
-
+//full screen activity
 public class BaseActivity extends AppCompatActivity {
 
     @Override
