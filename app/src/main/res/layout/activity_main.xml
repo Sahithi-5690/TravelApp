@@ -107,7 +107,7 @@
             
             <!-- End of Banner image with slider -->
             
-            <!-- Additional sections like RecyclerView and Popular Destination can follow here -->
+            <!-- Additional layout sections for RecyclerView and Popular Destination -->
         </LinearLayout>
     </ScrollView>
 
