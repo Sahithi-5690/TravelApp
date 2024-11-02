@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Root layout: ConstraintLayout serves as the base layout for other components -->
+<!-- Main layout container using ConstraintLayout -->
 <androidx.constraintlayout.widget.ConstraintLayout 
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -9,7 +9,6 @@
     android:layout_height="wrap_content"
     android:background="@color/white"
     tools:context=".Activity.IntroActivity">
-
     <!-- ScrollView allows vertical scrolling for the content inside -->
     <ScrollView
         android:layout_width="match_parent"
