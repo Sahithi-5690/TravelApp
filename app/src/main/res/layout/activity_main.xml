@@ -8,7 +8,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Activity.MainActivity">
-
+    
+<!-- Main ScrollView container for scrolling content vertically -->
     <ScrollView
         android:id="@+id/scrollView2"
         android:layout_width="match_parent"
@@ -27,7 +28,8 @@
                 android:layout_marginTop="48dp"
                 android:layout_marginEnd="24dp"
                 android:background="@drawable/grey_bg">
-
+                
+             <!-- EditText for search input -->
                 <EditText
                     android:id="@+id/editTextText"
                     android:layout_width="0dp"
