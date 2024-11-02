@@ -27,8 +27,7 @@
                 android:layout_height="733dp"
                 android:scaleType="centerCrop"
                 app:srcCompat="@drawable/intro_pic" />
-
-            <!-- Title TextView: displays an introductory title centered with bold styling -->
+            <!-- Main title with bold and centered style -->
             <TextView
                 android:id="@+id/textView"
                 android:layout_width="match_parent"
