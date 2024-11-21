@@ -1,35 +1,30 @@
 package com.example.androidproject.Domain;
 
 public class Category {
-    private int Id;
-    private String ImagePath;
-    private String Name;
+    private int imageResourceId;
+    private String title;
 
-    public Category() {
+    // Constructor, getters, and setters
+    public Category(int imageResourceId, String title) {
+        this.imageResourceId = imageResourceId;
+        this.title = title;
     }
 
-    public int getId() {
-        return Id;
+    public int getImageResourceId() {
+        return imageResourceId;
     }
 
-    public void setId(int id) {
-        Id = id;
+    public void setImageResourceId(int imageResourceId) {
+        this.imageResourceId = imageResourceId;
     }
 
-    public String getImagePath() {
-        return ImagePath;
+    public String getTitle() {
+        return title;
     }
 
-    public void setImagePath(String imagePath) {
-        ImagePath = imagePath;
-    }
-
-    public String getName() {
-        return Name;
-    }
-
-    public void setName(String name) {
-        Name = name;
+    public void setTitle(String title) {
+        this.title = title;
     }
 }
+
 
