@@ -10,7 +10,7 @@
     android:background="@color/white"
     tools:context=".Activity.IntroActivity">
 
-    <!-- Enable scrolling for the intro content -->
+    <!-- Enable leela krishna scrolling for the intro content -->
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
