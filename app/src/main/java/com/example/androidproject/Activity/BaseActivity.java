@@ -14,7 +14,7 @@ public class BaseActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) { // Lifecycle method called when the activity is created
         super.onCreate(savedInstanceState); // Call the superclass's onCreate method to set up the activity
 
-        // Get the Window object associated with this activity
+         // Enable full-screen mode by setting window flags
         Window w = getWindow();
 
         // Set the window to fullscreen mode by disabling layout limits
