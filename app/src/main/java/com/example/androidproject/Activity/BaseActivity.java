@@ -6,21 +6,20 @@ import android.view.WindowManager;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-// BaseActivity class that serves as a parent class for other activities
-// Configures a fullscreen layout by extending AppCompatActivity
+// BaseActivity provides common functionality for all activities in the app.
+// It sets up a fullscreen layout by overriding AppCompatActivity.
 public class BaseActivity extends AppCompatActivity {
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) { // Lifecycle method called when the activity is created
-        super.onCreate(savedInstanceState); // Call the superclass's onCreate method to set up the activity
+    protected void onCreate(Bundle savedInstanceState) { 
+        super.onCreate(savedInstanceState); // Initialize the activity with the provided state.
 
-         // Enable full-screen mode by setting window flags
-        Window w = getWindow();
+        // Configure the window to use fullscreen mode.
+        Window window = getWindow();
 
-        // Set the window to fullscreen mode by disabling layout limits
-        // FLAG_LAYOUT_NO_LIMITS allows the activity layout to extend into system UI areas (like status bar and navigation bar)
-        w.setFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS,
-                WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
+        // Enable layout to extend into system UI areas (status bar and navigation bar).
+        // This creates an immersive, edge-to-edge screen experience.
+        window.setFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS,
+                        WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
     }
 }
-
