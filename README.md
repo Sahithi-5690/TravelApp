@@ -21,3 +21,10 @@ The **Trip Advisor App** is a travel companion designed to enhance trip planning
 - **Chathurya Reddy Aenugu**  
 - **Sai Sahithi Daka**  
 - **Leela Krishna Andhe**
+
+---
+
+### Development Setup
+1. Clone the repository:
+   ```bash
+   git clone (https://github.com/Sahithi-5690/TravelApp.git)
