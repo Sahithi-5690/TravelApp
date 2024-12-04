@@ -1,5 +1,6 @@
 package com.example.androidproject.Adapter;
 
+
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -15,13 +16,13 @@ import com.example.androidproject.Domain.Category;
 import com.example.androidproject.R;
 import com.example.androidproject.databinding.ViewholderCategoryBinding;
 
+
 import java.util.List;
 
 public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.Viewholder> {
-    private List<Category> items; // List to hold category data
-    private int currentlyVisiblePosition = -1; // Tracks which item's title is currently visible
+    private List<Category> items;
+    private int currentlyVisiblePosition = -1;
 
-    // Constructor to initialize the adapter with category data
     public CategoryAdapter(List<Category> items) {
         this.items = items;
     }
@@ -29,65 +30,63 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.Viewho
     @NonNull
     @Override
     public CategoryAdapter.Viewholder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        // Inflate the view for the ViewHolder using the layout resource
         View viewz = LayoutInflater.from(parent.getContext()).inflate(R.layout.viewholder_category, parent, false);
         return new Viewholder(viewz);
     }
 
     @Override
     public void onBindViewHolder(@NonNull CategoryAdapter.Viewholder holder, int position) {
-        Category item = items.get(position); // Get the category item at the current position
-
-        // Set the image and title for the ViewHolder
+        Category item = items.get(position);
         holder.imageView.setImageResource(item.getImageResourceId()); // Set image from drawable
         holder.titleTextView.setText(item.getTitle());
 
-        // Initially, hide the title and remove the background for the item view
+        // Initially, set the title to be hidden and remove the background from the whole item view
         holder.titleTextView.setVisibility(View.GONE);
-        holder.itemView.setBackgroundResource(0); // Remove background
+        holder.itemView.setBackgroundResource(0); // Remove background from the whole item view
 
-        // If the current item's title is the one that's visible, display it and set the background
+        // If the title at the current position is the visible one, show it and set the background for the whole item view
         if (currentlyVisiblePosition == position) {
             holder.titleTextView.setVisibility(View.VISIBLE);
-            holder.itemView.setBackgroundResource(R.drawable.blue_bg); // Set background
+            holder.itemView.setBackgroundResource(R.drawable.blue_bg); // Set background for the whole item view
         }
 
-        // Handle item click to toggle title visibility and background
         holder.itemView.setOnClickListener(v -> {
+            // Check if this item is currently visible
             if (holder.titleTextView.getVisibility() == View.GONE) {
-                // Hide previously visible title, if any
+                // If the clicked item's title is hidden, show it and set the background for the whole item view
                 if (currentlyVisiblePosition != -1) {
-                    notifyItemChanged(currentlyVisiblePosition); // Notify adapter to update view
+                    // Hide the previous title (if any)
+                    notifyItemChanged(currentlyVisiblePosition);
                 }
 
-                // Show current item's title and set the background
+                // Show the clicked item's title and apply the background to the whole item view
                 holder.titleTextView.setVisibility(View.VISIBLE);
-                holder.itemView.setBackgroundResource(R.drawable.blue_bg);
-                currentlyVisiblePosition = position; // Update visible position
+                holder.itemView.setBackgroundResource(R.drawable.blue_bg); // Set background for the whole item view
+                currentlyVisiblePosition = position; // Update the currently visible position
             } else {
-                // Hide the title and remove the background
+                // If the clicked item's title is visible, hide it and remove the background from the whole item view
                 holder.titleTextView.setVisibility(View.GONE);
-                holder.itemView.setBackgroundResource(0);
-                currentlyVisiblePosition = -1; // Reset visible position
+                holder.itemView.setBackgroundResource(0); // Remove background from the whole item view
+                currentlyVisiblePosition = -1; // No item is visible now
             }
         });
     }
 
+
     @Override
     public int getItemCount() {
-        return items.size(); // Return the total number of items
+        return items.size();
     }
 
-    // ViewHolder class to hold references to the views in each item layout
     public static class Viewholder extends RecyclerView.ViewHolder {
-        ImageView imageView; // Image view for category image
-        TextView titleTextView; // Text view for category title
+        ImageView imageView;
+        TextView titleTextView;
 
         public Viewholder(View itemView) {
             super(itemView);
-            // Initialize the views
             imageView = itemView.findViewById(R.id.pic);
             titleTextView = itemView.findViewById(R.id.title);
         }
     }
 }
+

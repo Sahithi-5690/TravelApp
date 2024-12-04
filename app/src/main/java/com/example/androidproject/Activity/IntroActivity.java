@@ -11,11 +11,8 @@ ActivityIntroBinding binding;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        // Initialize view binding for the activity
         binding = ActivityIntroBinding.inflate(getLayoutInflater());
-        // Set the content view using the root of the binding
         setContentView(binding.getRoot());
-        // imagebutton to open the main activity
         binding.introBtn.setOnClickListener(v -> startActivity(new Intent(IntroActivity.this, MainActivity.class)));
     }
 }
