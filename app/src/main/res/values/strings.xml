@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">TravelApp</string>
+    <string name="app_name">project189.2</string>
     <string name="introTitle">Adventure Awaits – <font color='#3f95ec'>\n Travel World</font> with Us</string>
     <string name="subIntro">Your all-in-one travel guide for exploring destinations.</string>
 </resources>
