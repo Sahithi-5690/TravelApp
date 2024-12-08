@@ -69,18 +69,6 @@
                 android:layout_height="match_parent"
                 android:layout_marginTop="16dp">
 
-                <!-- ImageView for the background image -->
-                <ImageView
-                    android:id="@+id/backgroundImage"
-                    android:layout_width="match_parent"
-                    android:layout_height="160dp"
-                    android:src="@drawable/slider"
-                    android:scaleType="centerCrop"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
                 <androidx.viewpager2.widget.ViewPager2
                     android:id="@+id/viewPagerSlider"
                     android:layout_width="match_parent"
@@ -92,17 +80,9 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
-                <ProgressBar
-                    android:id="@+id/progressBarBanner"
-                    style="?android:attr/progressBarStyle"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
+
 
 
             <androidx.constraintlayout.widget.ConstraintLayout

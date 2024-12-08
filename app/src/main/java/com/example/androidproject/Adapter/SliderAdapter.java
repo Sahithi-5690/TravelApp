@@ -8,45 +8,30 @@ import android.widget.ImageView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
-import androidx.viewpager2.widget.ViewPager2;
 
-import com.bumptech.glide.Glide;
 import com.example.androidproject.Domain.SliderItems;
 import com.example.androidproject.R;
 
-
 import java.util.ArrayList;
 
-public class SliderAdapter extends RecyclerView.Adapter<SliderAdapter.SliderViewholder> {
+public class SliderAdapter extends RecyclerView.Adapter<SliderAdapter.SliderViewHolder> {
     private ArrayList<SliderItems> sliderItems;
-    private ViewPager2 viewPager2;
     private Context context;
-    private Runnable runnable = new Runnable() {
-        @Override
-        public void run() {
-            sliderItems.addAll(sliderItems);
-            notifyDataSetChanged();
-        }
-    };
 
-    public SliderAdapter(ArrayList<SliderItems> sliderItems, ViewPager2 viewPager2) {
+    public SliderAdapter(ArrayList<SliderItems> sliderItems) {
         this.sliderItems = sliderItems;
-        this.viewPager2 = viewPager2;
     }
 
     @NonNull
     @Override
-    public SliderAdapter.SliderViewholder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public SliderViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         context = parent.getContext();
-        return new SliderViewholder(LayoutInflater.from(context).inflate(R.layout.slider_item_container, parent, false));
+        return new SliderViewHolder(LayoutInflater.from(context).inflate(R.layout.slider_item_container, parent, false));
     }
 
     @Override
-    public void onBindViewHolder(@NonNull SliderAdapter.SliderViewholder holder, int position) {
+    public void onBindViewHolder(@NonNull SliderViewHolder holder, int position) {
         holder.setImage(sliderItems.get(position));
-        if (position == sliderItems.size() - 2) {
-            viewPager2.post(runnable);
-        }
     }
 
     @Override
@@ -54,20 +39,16 @@ public class SliderAdapter extends RecyclerView.Adapter<SliderAdapter.SliderView
         return sliderItems.size();
     }
 
-    public class SliderViewholder extends RecyclerView.ViewHolder {
+    public class SliderViewHolder extends RecyclerView.ViewHolder {
         private ImageView imageView;
 
-        public SliderViewholder(@NonNull View itemView) {
+        public SliderViewHolder(@NonNull View itemView) {
             super(itemView);
             imageView = itemView.findViewById(R.id.imageSlide);
         }
 
         void setImage(SliderItems sliderItems) {
-            Glide.with(context)
-                    .load(sliderItems.getUrl())
-                    .into(imageView);
+            imageView.setImageResource(sliderItems.getImageResId());
         }
-
     }
 }
-

@@ -8,14 +8,16 @@ public class ItemDomain implements Serializable{
     private String address;
     private float score;
     private int pic;
+    private int descriptionResId;
 
     // Constructor
-    public ItemDomain(String title, double price, String address, float score, int pic) {
+    public ItemDomain(String title, double price, String address, float score, int pic, int descriptionResId) {
         this.title = title;
         this.price = price;
         this.address = address;
         this.score = score;
         this.pic = pic;
+        this.descriptionResId = descriptionResId;
     }
 
     // Getters and setters
@@ -58,4 +60,10 @@ public class ItemDomain implements Serializable{
     public void setPic(int pic) {
         this.pic = pic;
     }
+
+    public int getDescriptionResId() { return descriptionResId;}
+
+    public void setDescriptionResId(int descriptionResId) { this.descriptionResId = descriptionResId;}
+
+
 }

@@ -33,7 +33,6 @@ public class DetailActivity extends BaseActivity {
         binding.titleTxt.setText(object.getTitle());
         binding.priceTxt.setText("$" + object.getPrice());
         binding.backBtn.setOnClickListener(v -> finish());
-        //binding.descriptionTxt.setText(object.getDescription());
         binding.addressTxt.setText(object.getAddress());
         binding.ratingTxt.setText(object.getScore() + " Rating");
         binding.ratingBar.setRating((float) object.getScore());
@@ -41,6 +40,13 @@ public class DetailActivity extends BaseActivity {
         Glide.with(DetailActivity.this)
                 .load(object.getPic())
                 .into(binding.pic);
+
+        // Fetching the description from strings.xml dynamically
+        if (object.getDescriptionResId() != 0) {
+            binding.descriptionTxt.setText(object.getDescriptionResId());
+        } else {
+            binding.descriptionTxt.setText("Description not available");
+        }
 
         binding.addToCartBtn.setOnClickListener(v -> {
             Intent intent = new Intent(DetailActivity.this, TicketActivity.class);

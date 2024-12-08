@@ -1,16 +1,17 @@
 package com.example.androidproject.Domain;
 
 public class SliderItems {
-    private String url;
+    private int imageResId;
 
-    public SliderItems() {
+    public SliderItems(int imageResId) {
+        this.imageResId = imageResId;
     }
 
-    public String getUrl() {
-        return url;
+    public int getImageResId() {
+        return imageResId;
     }
 
-    public void setUrl(String url) {
-        this.url = url;
+    public void setImageResId(int imageResId) {
+        this.imageResId = imageResId;
     }
 }
