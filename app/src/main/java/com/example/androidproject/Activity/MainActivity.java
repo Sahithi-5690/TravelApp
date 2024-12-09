@@ -5,6 +5,8 @@ import android.view.View;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.view.GravityCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager2.widget.CompositePageTransformer;
@@ -21,17 +23,23 @@ import com.example.androidproject.R;
 import com.example.androidproject.databinding.ActivityMainBinding;
 import android.os.Handler;
 import android.os.Looper;
+import android.widget.Button;
 
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
     private Handler sliderHandler = new Handler(Looper.getMainLooper());
     ActivityMainBinding binding;
+    private DrawerLayout drawerLayout;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+
+        drawerLayout = findViewById(R.id.drawerLayout);
+        Button accountButton = findViewById(R.id.buttonAccount);
+        accountButton.setOnClickListener(v -> drawerLayout.openDrawer(GravityCompat.START));
 
 
         initLocalBanner();

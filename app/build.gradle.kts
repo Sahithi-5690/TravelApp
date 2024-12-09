@@ -51,6 +51,8 @@ dependencies {
     implementation ("com.github.bumptech.glide:glide:4.14.2")  // Latest stable version
     annotationProcessor ("com.github.bumptech.glide:compiler:4.14.2")  // For annotation processing
     implementation ("pl.droidsonroids.gif:android-gif-drawable:1.2.27")
+    implementation ("com.google.android.material:material:1.8.0 ")
+
 
 
 }
