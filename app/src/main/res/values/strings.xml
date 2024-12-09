@@ -12,4 +12,16 @@
     <string name="jackson_Hole">Nestled in Wyoming, Jackson Hole is a gateway to the stunning Grand Teton and Yellowstone National Parks. Known for its rugged terrain and breathtaking views, its a haven for outdoor lovers. Whether you’re skiing, hiking, or wildlife watching, Jackson Hole offers endless adventure. The town itself has a charming Western feel with art galleries and boutique shops.</string>
     <string name="Honolulu">Immerse yourself in the vibrant Hawaiian culture and tropical beauty of Honolulu. Enjoy the stunning beaches, clear waters, and a variety of water sports, from surfing to snorkeling. Experience the islands rich heritage through historical sites, delicious local food, and lively cultural festivals. Honolulu combines adventure, relaxation, and breathtaking natural landscapes.</string>
     <!-- Add descriptions for your objects here -->
+
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">User Name</string>
+    <string name="nav_header_subtitle">Write a review</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
 </resources>
