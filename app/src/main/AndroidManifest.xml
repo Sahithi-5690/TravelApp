@@ -21,6 +21,9 @@
             </intent-filter>
         </activity>
         <activity
+            android:name=".Activity.SeeAllActivity"
+            android:exported="false" />
+        <activity
             android:name=".Activity.TicketActivity"
             android:exported="false" />
         <activity
