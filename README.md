@@ -98,3 +98,9 @@ TravelApp’s user flow is designed to provide a seamless experience:
 
 ## Supported Devices  
 -  TravelApp is optimized for the Small, Medium, Large device categories.
+
+---
+## Note: If any Issues Arise
+- Please check and update AGP version in versions.toml file
+- Check and update Java versions as per system configuration.
+- Check local.properties path directs to your local SDK.
